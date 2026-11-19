@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>回声测绘 · ECHO SURVEY</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23081012'/%3E%3Ccircle cx='32' cy='32' r='18' fill='none' stroke='%237fe3c1' stroke-width='2'/%3E%3Ccircle cx='32' cy='32' r='4' fill='%23ff8268'/%3E%3C/svg%3E">
+<style>
+  :root{--bg:#081012;--paper:#f0e8d6;--ink:#1d302d;--muted:#60706a;--teal:#4b9b86;--coral:#d65d45;--line:#d8cfbd;}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:"Microsoft YaHei","PingFang SC","Noto Sans SC",system-ui,sans-serif;}
+  .wrap{width:min(1080px,calc(100% - 32px));margin:0 auto;padding:28px 0 46px;}
+  a{color:inherit}
+  .back{font-size:11px;letter-spacing:.08em;color:var(--muted);text-decoration:none}
+  .back:hover{color:var(--ink)}
+  header{margin-top:26px;display:flex;justify-content:space-between;align-items:flex-end;gap:30px;border-bottom:1px solid var(--line);padding-bottom:22px}
+  .eyebrow{font-size:9px;letter-spacing:.3em;color:var(--teal);font-weight:800}
+  h1{font-family:"Songti SC","STSong",Georgia,serif;font-size:clamp(38px,6vw,72px);line-height:1;margin:12px 0 8px;letter-spacing:.06em}
+  .english{font-size:10px;letter-spacing:.38em;color:var(--muted)}
+  .meta{text-align:right;font-size:11px;line-height:1.9;color:var(--muted)}
+  .meta b{display:block;color:var(--ink);font-size:14px}
+  .hero{margin-top:24px;position:relative;border-radius:4px;overflow:hidden;box-shadow:0 24px 60px rgba(50,45,35,.18);background:#020607}
+  .hero img{display:block;width:100%}
+  .hero .badge{position:absolute;left:16px;top:16px;background:rgba(8,16,18,.72);color:#b9e6d6;border:1px solid rgba(127,227,193,.25);padding:7px 11px;border-radius:99px;font-size:9px;letter-spacing:.16em;backdrop-filter:blur(6px)}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:30px}
+  .block h2{font-size:10px;letter-spacing:.2em;color:var(--teal);margin:0 0 10px;font-weight:800}
+  .block p{font-size:13px;line-height:1.95;color:#4d5f58;margin:0 0 12px}
+  .block .tag{display:inline-block;border:1px solid var(--line);border-radius:99px;padding:5px 9px;font-size:10px;color:var(--muted);margin:0 5px 5px 0}
+  .download{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:var(--paper);text-decoration:none;border-radius:9px;padding:13px 18px;font-size:12px;letter-spacing:.06em;margin-top:8px;transition:.16s}
+  .download:hover{background:#2b443f;transform:translateY(-1px)}
+  .download small{font-size:10px;opacity:.55;letter-spacing:0}
+  .controls{margin-top:18px;border-top:1px solid var(--line);padding-top:14px;font-size:11px;line-height:2;color:var(--muted)}
+  .controls b{color:var(--ink);font-weight:700}
+  footer{margin-top:34px;border-top:1px solid var(--line);padding-top:16px;display:flex;justify-content:space-between;gap:20px;font-size:10px;color:#89958d}
+  @media(max-width:720px){.cols{grid-template-columns:1fr;gap:22px}header{flex-direction:column;align-items:flex-start;gap:12px}.meta{text-align:left}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../../index.html">← 返回作品集</a>
+  <header>
+    <div>
+      <div class="eyebrow">UNITY 3D · FIRST-PERSON · 01</div>
+      <h1>回声测绘</h1>
+      <div class="english">ECHO SURVEY · SEE WITH SOUND</div>
+    </div>
+    <div class="meta"><b>Unity 6 / Windows</b>单人 · 5–8 分钟<br>2026</div>
+  </header>
+
+  <div class="hero">
+    <img src="../../screenshots/echo-survey.png" alt="回声测绘游戏画面">
+    <div class="badge">SONAR VISUALIZATION / REAL-TIME SHADER</div>
+  </div>
+
+  <div class="cols">
+    <div class="block">
+      <h2>作品说明</h2>
+      <p>一个没有光的测绘场。你手里只有声呐。按左键发出一次脉冲，声波以玩家为中心向外扩散，只在波经过的地方把建筑、柱子和地面短暂显形。</p>
+      <p>目标不是战斗，而是用自己的“回声”把三座信标从黑暗里找出来。每种材质、每道墙的轮廓都由同一个实时 shader 响应四组脉冲，不依赖烘焙光照。</p>
+      <span class="tag">Unity 6</span><span class="tag">C#</span><span class="tag">Custom Shader</span><span class="tag">Procedural Audio</span><span class="tag">CharacterController</span>
+      <br><a class="download" href="https://github.com/amsto0315/light-core-works/releases/download/v1.0/EchoSurvey_Windows_x64.zip">下载 Windows 构建 <small>约 35 MB</small></a>
+    </div>
+    <div class="block">
+      <h2>操作</h2>
+      <div class="controls"><b>WASD</b> 移动<br><b>鼠标</b> 环视<br><b>左键</b> 发出声呐脉冲<br><b>Shift</b> 慢走<br><b>Esc</b> 暂停</div>
+      <h2 style="margin-top:22px">技术点</h2>
+      <p>四组同时存在的脉冲数据通过 `Shader.SetGlobalVectorArray` 注入表面着色器；每个片元计算自己到四组脉冲波前的距离，得到环形显形、余辉和网格线。脉冲音频由程序生成，不依赖音频素材。</p>
+    </div>
+  </div>
+
+  <footer><span>© 2026 · 原创作品，代码与关卡自制</span><span>Unity 6 · Built-in Render Pipeline</span></footer>
+</div>
+</body>
+</html>
