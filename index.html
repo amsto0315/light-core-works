@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>光子光核 · 作品集 2026</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23081012'/%3E%3Ccircle cx='32' cy='32' r='18' fill='none' stroke='%237fe3c1' stroke-width='2'/%3E%3Ccircle cx='32' cy='32' r='4' fill='%23ff8268'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#071013;--panel:#0c1719;--panel-2:#0f1d1f;--paper:#f0e8d6;--ink:#e7eee8;
+    --muted:#8ba096;--faint:#53675f;--line:rgba(190,220,205,.14);
+    --teal:#7fe3c1;--coral:#ff8268;--gold:#e7c27a;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;background:
+      radial-gradient(circle at 12% -5%,rgba(127,227,193,.11),transparent 34%),
+      radial-gradient(circle at 95% 12%,rgba(255,130,104,.08),transparent 30%),
+      var(--bg);
+    color:var(--ink);font-family:"Microsoft YaHei","PingFang SC","Noto Sans SC",system-ui,sans-serif;
+  }
+  body::before{
+    content:"";position:fixed;inset:0;pointer-events:none;opacity:.16;
+    background-image:repeating-linear-gradient(0deg,rgba(180,220,205,.035) 0 1px,transparent 1px 4px);
+    mix-blend-mode:screen;
+  }
+  .wrap{position:relative;width:min(1240px,calc(100% - 40px));margin:0 auto;padding:28px 0 46px;}
+  .top{display:flex;justify-content:space-between;align-items:center;padding-bottom:18px;border-bottom:1px solid var(--line);}
+  .brand{font-size:10px;letter-spacing:.26em;color:#c1d8cc;font-weight:800;}
+  .brand span{color:var(--teal);}
+  .top-right{font-size:9px;letter-spacing:.18em;color:var(--faint);}
+  .hero{padding:76px 0 58px;display:flex;justify-content:space-between;align-items:flex-end;gap:40px;}
+  .hero .eyebrow{font-size:10px;letter-spacing:.34em;color:var(--teal);font-weight:700;}
+  h1{
+    margin:16px 0 12px;font-family:"Songti SC","STSong","Noto Serif SC",Georgia,serif;
+    font-size:clamp(46px,8vw,108px);line-height:.96;font-weight:600;letter-spacing:.04em;
+  }
+  h1 em{font-style:normal;color:var(--teal);}
+  .hero .sub{font-size:12px;line-height:2;color:#a9beb3;max-width:500px;}
+  .hero-note{text-align:right;font-size:10px;line-height:2;color:var(--faint);letter-spacing:.06em;white-space:nowrap;}
+  .hero-note b{display:block;color:#dce8df;font-size:15px;letter-spacing:.04em;font-weight:500;margin-bottom:2px;}
+  .works{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
+  .work{
+    position:relative;overflow:hidden;border:1px solid var(--line);border-radius:16px;
+    background:var(--panel);text-decoration:none;color:var(--ink);
+    transition:transform .22s,border-color .22s,box-shadow .22s;
+  }
+  .work:hover{transform:translateY(-4px);border-color:rgba(127,227,193,.35);box-shadow:0 28px 60px rgba(0,0,0,.30);}
+  .work img{display:block;width:100%;height:310px;object-fit:cover;opacity:.92;transition:transform .5s,opacity .3s;}
+  .work:hover img{transform:scale(1.025);opacity:1;}
+  .work .body{padding:22px 24px 24px;}
+  .work .num{font-size:9px;letter-spacing:.24em;color:var(--faint);}
+  .work h2{margin:12px 0 8px;font-family:"Songti SC","STSong",Georgia,serif;font-size:30px;font-weight:600;letter-spacing:.04em;line-height:1.1;}
+  .work .en{font-size:9px;letter-spacing:.26em;color:var(--teal);text-transform:uppercase;}
+  .work p{margin:14px 0 18px;font-size:12px;line-height:1.9;color:#9db1a6;}
+  .tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:18px;}
+  .tags span{font-size:9px;letter-spacing:.06em;border:1px solid var(--line);color:#9db1a6;padding:4px 7px;border-radius:99px;}
+  .open{display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:14px;font-size:10px;letter-spacing:.12em;color:#c9dad0;}
+  .open .arrow{color:var(--teal);font-size:16px;transition:transform .2s;}
+  .work:hover .open .arrow{transform:translateX(4px);}
+  .work.wide{grid-column:1/-1;display:grid;grid-template-columns:1.15fr 1fr;}
+  .work.wide img{height:100%;min-height:340px;}
+  .work.wide .body{display:flex;flex-direction:column;justify-content:center;padding:38px 40px;}
+  .work.wide h2{font-size:38px;}
+  .section-line{display:flex;align-items:center;gap:14px;margin:44px 0 16px;color:var(--faint);font-size:9px;letter-spacing:.22em;}
+  .section-line::after{content:"";flex:1;height:1px;background:var(--line);}
+  .about{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:26px;border-top:1px solid var(--line);margin-top:46px;padding-top:24px;}
+  .about h3{font-size:9px;letter-spacing:.2em;color:var(--teal);margin:0 0 10px;}
+  .about p{font-size:11px;line-height:1.95;color:#91a69b;margin:0;}
+  .about strong{color:#d4e2d8;font-weight:600;}
+  footer{display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--line);margin-top:40px;padding-top:18px;font-size:9px;letter-spacing:.08em;color:var(--faint);}
+  @media(max-width:820px){
+    .wrap{width:calc(100% - 26px);padding-top:18px;}
+    .hero{padding:50px 0 36px;flex-direction:column;align-items:flex-start;gap:22px;}
+    .hero-note{text-align:left;}
+    .works{grid-template-columns:1fr;}
+    .work.wide{display:block;}
+    .work.wide img{height:260px;min-height:0;}
+    .work.wide .body{padding:22px 24px 24px;}
+    .work.wide h2{font-size:30px;}
+    .about{grid-template-columns:1fr;gap:18px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div class="brand">LIGHT / CORE / WORKS <span>· 2026</span></div>
+    <div class="top-right">3 ORIGINAL WORKS · UNITY + WEB</div>
+  </div>
+
+  <section class="hero">
+    <div>
+      <div class="eyebrow">PORTFOLIO · 光子光核共创营</div>
+      <h1>把看不见的<br>东西，<em>做出来。</em></h1>
+      <p class="sub">三个从零完成的原创作品：一个用声音测绘黑暗的 Unity 第一人称体验，一个实时粒子引力场，以及一个生成式字体海报工具。它们分别回答三个问题：空间如何被感知、秩序如何从混沌里长出来、文字如何变成图像。</p>
+    </div>
+    <div class="hero-note"><b>2026 / 11</b>3 works<br>Unity 6 · Canvas · Web Audio<br>全部代码与关卡自制</div>
+  </section>
+
+  <div class="section-line">SELECTED WORKS · 01—03</div>
+
+  <section class="works">
+    <a class="work wide" href="works/echo-survey/index.html">
+      <img src="screenshots/echo-survey.png" alt="回声测绘">
+      <div class="body">
+        <div class="num">01 / UNITY 3D</div>
+        <h2>回声测绘</h2>
+        <div class="en">Echo Survey · See With Sound</div>
+        <p>一个没有光的测绘场。左键发出声呐脉冲，实时 shader 让建筑的轮廓随波前显形；找到三座信标，把空间从黑暗里一点点“听”出来。</p>
+        <div class="tags"><span>Unity 6</span><span>Custom Shader</span><span>Procedural Audio</span><span>First Person</span></div>
+        <div class="open"><span>查看作品与下载</span><span class="arrow">→</span></div>
+      </div>
+    </a>
+
+    <a class="work" href="works/gravity-garden/index.html">
+      <img src="screenshots/gravity-garden.png" alt="引力花园">
+      <div class="body">
+        <div class="num">02 / CREATIVE WEB</div>
+        <h2>引力花园</h2>
+        <div class="en">Gravity Garden · A Field That Falls Toward You</div>
+        <p>9,000 个粒子组成的实时引力场。鼠标是唯一的引力源；点击释放脉冲，让星尘在指尖周围形成旋涡。</p>
+        <div class="tags"><span>Canvas 2D</span><span>Web Audio</span><span>Particle Simulation</span><span>Generative</span></div>
+        <div class="open"><span>打开作品</span><span class="arrow">→</span></div>
+      </div>
+    </a>
+
+    <a class="work" href="works/type-field/index.html">
+      <img src="screenshots/type-field.png" alt="字场">
+      <div class="body">
+        <div class="num">03 / GENERATIVE DESIGN</div>
+        <h2>字场</h2>
+        <div class="en">Type Field · A Generative Type Poster Studio</div>
+        <p>输入一句话，生成一张独一无二的字体海报。流场、径向、波纹三种构图，种子驱动，可导出 PNG 与 SVG。</p>
+        <div class="tags"><span>Generative Type</span><span>Deterministic Seed</span><span>PNG / SVG Export</span><span>Web Tool</span></div>
+        <div class="open"><span>打开作品</span><span class="arrow">→</span></div>
+      </div>
+    </a>
+  </section>
+
+  <div class="about">
+    <div>
+      <h3>关于这组作品</h3>
+      <p>三个作品都不是教程复刻：每个都先定义一条核心规则，再围绕规则做交互与视觉。<strong>回声测绘</strong>把“看见”换成“听见”；<strong>引力花园</strong>把物理模拟变成可触摸的星尘；<strong>字场</strong>把排版变成可生成的系统。</p>
+    </div>
+    <div>
+      <h3>技术栈</h3>
+      <p><strong>Unity 6 / C# / HLSL</strong>：实时脉冲着色、角色控制、程序化音频。<br><strong>HTML / Canvas 2D / Web Audio</strong>：粒子系统、实时音频合成、导出。<br>没有使用游戏模板或第三方玩法代码。</p>
+    </div>
+    <div>
+      <h3>怎么查看</h3>
+      <p>《引力花园》《字场》直接打开即可交互；《回声测绘》提供 Windows 构建下载。建议全屏、戴耳机观看。</p>
+    </div>
+  </div>
+
+  <footer><span>原创作品集 · 2026</span><span><a href="docs/光子光核_作品集.pdf" style="color:inherit;text-decoration:none">PDF 作品集 ↓</a> · Unity 6 · Web</span></footer>
+</div>
+</body>
+</html>
