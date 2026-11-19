@@ -5,6 +5,16 @@
 
 打开本文件夹的 **`index.html`** 开始浏览。
 
+## 公开链接
+
+- 作品集主页：https://amsto0315.github.io/light-core-works/
+- 回声测绘：https://amsto0315.github.io/light-core-works/works/echo-survey/index.html
+- 引力花园：https://amsto0315.github.io/light-core-works/works/gravity-garden/index.html
+- 字场：https://amsto0315.github.io/light-core-works/works/type-field/index.html
+- PDF：https://amsto0315.github.io/light-core-works/docs/%E5%85%89%E5%AD%90%E5%85%89%E6%A0%B8_%E4%BD%9C%E5%93%81%E9%9B%86.pdf
+
+（也可以直接看 `docs/公开链接.md`。）
+
 ---
 
 ## 作品
